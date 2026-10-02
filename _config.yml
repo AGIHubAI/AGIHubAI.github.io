@@ -6,3 +6,37 @@ theme: jekyll-theme-minimal
 url: https://agihub.ai
 exclude:
   - README.md
+
+# Live rooms base URL. Empty in development; set to server URL in production.
+# Used to generate join links on artifact and room pages.
+live_base_url: ""
+
+# Collections
+collections:
+  news:
+    output: true
+    permalink: /news/:name/
+  artifacts:
+    output: true
+    permalink: /artifacts/:name/
+  rooms:
+    output: true
+    permalink: /rooms/:name/
+
+# Collection defaults
+defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "artifact"
+  - scope:
+      path: ""
+      type: "artifacts"
+    values:
+      layout: "artifact"
+  - scope:
+      path: ""
+      type: "rooms"
+    values:
+      layout: "room"

@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<article class="room">
+  {% if page.title %}
+    <h1>{{ page.title }}</h1>
+  {% endif %}
+
+  {% if page.date %}
+    <p class="room-date">{{ page.date | date: "%B %d, %Y" }}</p>
+  {% endif %}
+
+  <div class="room-content">
+    {{ content }}
+  </div>
+
+  {% if page.room_path and site.live_base_url != empty %}
+    <div class="room-action">
+      <a href="{{ site.live_base_url }}{{ page.room_path }}" class="btn">Join live</a>
+    </div>
+  {% elsif page.room_path %}
+    <p class="room-notice">Live rooms are invite-only during beta.</p>
+  {% endif %}
+</article>
+
+<style>
+  .room {
+    margin: 2rem 0;
+  }
+
+  .room h1 {
+    margin-top: 0;
+  }
+
+  .room-date {
+    color: #666;
+    font-size: 0.9em;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .room-content {
+    line-height: 1.6;
+    margin: 1.5rem 0;
+  }
+
+  .room-action {
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    background-color: #333;
+  }
+
+  .room-notice {
+    padding: 0.75rem;
+    background-color: #f5f5f5;
+    border-left: 3px solid #ccc;
+    margin: 1rem 0;
+    font-size: 0.9em;
+    color: #666;
+  }
+</style>

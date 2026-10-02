@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<article class="artifact">
+  {% if page.title %}
+    <h1>{{ page.title }}</h1>
+  {% endif %}
+
+  {% if page.date %}
+    <p class="artifact-date">{{ page.date | date: "%B %d, %Y" }}</p>
+  {% endif %}
+
+  <div class="artifact-content">
+    {{ content }}
+  </div>
+
+  {% if page.share_url and site.live_base_url != empty %}
+    <div class="artifact-action">
+      <a href="{{ page.share_url }}" class="btn">Talk to the representative</a>
+    </div>
+  {% elsif page.share_url %}
+    <p class="artifact-notice">Live rooms are invite-only during beta.</p>
+  {% endif %}
+</article>
+
+<style>
+  .artifact {
+    margin: 2rem 0;
+  }
+
+  .artifact h1 {
+    margin-top: 0;
+  }
+
+  .artifact-date {
+    color: #666;
+    font-size: 0.9em;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .artifact-content {
+    line-height: 1.6;
+    margin: 1.5rem 0;
+  }
+
+  .artifact-action {
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    background-color: #333;
+  }
+
+  .artifact-notice {
+    padding: 0.75rem;
+    background-color: #f5f5f5;
+    border-left: 3px solid #ccc;
+    margin: 1rem 0;
+    font-size: 0.9em;
+    color: #666;
+  }
+</style>
