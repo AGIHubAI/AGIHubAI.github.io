@@ -5,7 +5,6 @@ Source for https://agihub.ai, served by GitHub Pages (Jekyll, `jekyll-theme-mini
 | Path | Contents |
 |---|---|
 | `index.md` | Landing page |
-| `docs/` | Strategic model, growth engine, monetization, open questions |
 | `CNAME` | Custom domain `agihub.ai` |
 
 ## DNS for agihub.ai
