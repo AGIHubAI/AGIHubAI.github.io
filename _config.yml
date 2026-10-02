@@ -1,0 +1,8 @@
+title: AGIHub
+description: >-
+  A living network for the transition from human-operated to agent-operated
+  organizations.
+theme: jekyll-theme-minimal
+url: https://agihub.ai
+exclude:
+  - README.md
