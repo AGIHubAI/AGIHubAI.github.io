@@ -6,14 +6,14 @@ permalink: /artifacts/
 # Artifacts
 
 {% if site.artifacts.size > 0 %}
-  {% for item in site.artifacts %}
-    <div class="artifact-item">
-      <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-      <p class="artifact-date">{{ item.date | date: "%B %d, %Y" }}</p>
-    </div>
-  {% endfor %}
+{% for item in site.artifacts %}
+<div class="artifact-item">
+<h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+<p class="artifact-date">{{ item.date | date: "%B %d, %Y" }}</p>
+</div>
+{% endfor %}
 {% else %}
-  <p>No artifacts yet. Artifacts are generated when rooms conclude.</p>
+<p>No artifacts yet. Artifacts are generated when rooms conclude.</p>
 {% endif %}
 
 <style>

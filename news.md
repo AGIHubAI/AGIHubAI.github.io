@@ -8,15 +8,15 @@ permalink: /news/
 {% assign sorted_news = site.news | sort: 'date' | reverse %}
 
 {% if sorted_news.size > 0 %}
-  {% for item in sorted_news %}
-    <div class="news-item">
-      <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-      <p class="news-date">{{ item.date | date: "%B %d, %Y" }}</p>
-      <p>{{ item.excerpt }}</p>
-    </div>
-  {% endfor %}
+{% for item in sorted_news %}
+<div class="news-item">
+<h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+<p class="news-date">{{ item.date | date: "%B %d, %Y" }}</p>
+<p>{{ item.excerpt }}</p>
+</div>
+{% endfor %}
 {% else %}
-  <p>No news yet.</p>
+<p>No news yet.</p>
 {% endif %}
 
 <style>

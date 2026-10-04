@@ -6,14 +6,14 @@ permalink: /rooms/
 # Topic Rooms
 
 {% if site.rooms.size > 0 %}
-  {% for item in site.rooms %}
-    <div class="room-item">
-      <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-      <p>{{ item.excerpt }}</p>
-    </div>
-  {% endfor %}
+{% for item in site.rooms %}
+<div class="room-item">
+<h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+<p>{{ item.excerpt }}</p>
+</div>
+{% endfor %}
 {% else %}
-  <p>No topic rooms yet.</p>
+<p>No topic rooms yet.</p>
 {% endif %}
 
 <style>
