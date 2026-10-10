@@ -7,6 +7,10 @@ url: https://agihub.ai
 exclude:
   - README.md
 
+# Next.js static export assets (Jekyll skips _-prefixed dirs otherwise)
+include:
+  - _next
+
 # Live rooms base URL. Empty in development; set to server URL in production.
 # Used to generate join links on artifact and room pages.
 live_base_url: ""
