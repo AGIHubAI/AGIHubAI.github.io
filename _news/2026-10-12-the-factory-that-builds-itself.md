@@ -43,14 +43,13 @@ Snapshot from the build repository, taken 2026-10-12 (UTC), GitHub REST API.
 |---|---|
 | Pull requests merged, all time | 103 |
 | Pull requests merged, last 7 days | 51 |
-| Factory-built PRs since the loop went live (2026-10-11) | 23 |
-| Factory PRs merged | 14 |
-| Factory PRs escalated to the operator | 7 (30%) |
-| Repeat escalations of the same class | 0 |
+| Factory build PRs opened since the loop went live (2026-10-11) | 23 |
+| Factory build PRs merged | 14 |
+| Factory build PRs still open | 9 |
+| Factory build PRs escalated to the operator | 7 (30%); 2 merged after a fix |
 
-Escalation classes so far: CI, permissions, deploy, control core, unclassified.
-A weekly job will publish these measures; until then this table is a manual
-snapshot.
+Escalation classes so far: CI (3), permissions, deploy, control core, unclassified.
+A weekly metrics job is planned; until it runs, this table is a manual snapshot.
 
 ## The voice room
 
